@@ -40,7 +40,7 @@ def lectures(request, fieldId):
         lectures2 += "]"
 
         if not lectures:
-            return JsonResponse({'error': 'There is no Field of Study with that id.'}, status=401)
+            return JsonResponse({'error': 'There is no Field of Study with that id.'}, status=422)
 
         x = json.loads(lectures2)
 
